@@ -11,14 +11,14 @@ We present 'Learning To Explain' (LTE) - a novel method for producing explanatio
 
 These checkpoints are important for reproducing the reults.
 
-### Stage A - pLTE:
+### pLTE:
 Example:
 ```
 CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./:$PYTHONPATH python3 ./main/seg_classification/run_seg_cls.py
 
 ```
 
-### Stage B - LTE:
+### LTE:
 
 Example:
 ```
@@ -34,14 +34,14 @@ CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./:$PYTHONPATH python3 ./main/seg_classificati
 
 - Move all datasets to ./data/
 
-### Stage A - pLTE:
+### pLTE:
 Example:
 ```
 CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./:$PYTHONPATH python3 ./main/segmentation_eval/seg_stage_a.py
 
 ```
 
-### Stage B - LTE:
+### LTE:
 
 Example:
 ```
