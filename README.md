@@ -1,31 +1,37 @@
-# PyTorch Implementation of TransformersLTE
+# PyTorch Implementation of LTE Framework for Vision Transformer
 
 We present 'Learning To Explain' (LTE) - a novel method for producing explanations by learning explanation masks. The LTE framework introduces an explainer-explainee model, in which the explainer learns to explain and justify the explainee's predictions. We demonstrate LTE's ability to produce explanations for ViT models, where it significantly outperforms state-of-the-art alternatives on multiple explanations and segmentation tests. 
 
 
-## Reproducing results on ViT-Base - Pertubations Metrics
+## Reproducing results on ViT-Base & ViT-Small - Pertubations Metrics
 ---
 ### Loading Checkpoints:
 - Download `checkpoints.zip` from https://drive.google.com/file/d/1AUYAxBgn5hvFbfaNgg73vNjS8PwTZYxV/view?usp=sharing 
 - unzip classifier.zip -d ./checkpoints/
 
-These checkpoints are important for reproducing the reults.
+These checkpoints are important for reproducing the results, also, the paths and the ViT `model_name` in the config file should be edited based on the running environment.
 
-### pLTE:
-Example:
-```
-CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./:$PYTHONPATH python3 ./main/seg_classification/run_seg_cls.py
-
-```
+All explanation metrics can be calculated using the mask files created during the LTE procedure.
 
 ### LTE:
 
 Example:
-```
+```python
 CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./:$PYTHONPATH python3 ./main/seg_classification/run_seg_cls_opt.py
+```
+### pLTE:
+
+Example:
+
+```python
+CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./:$PYTHONPATH python3 ./main/seg_classification/run_seg_cls.py
 
 ```
-## Reproducing results on ViT-Base - Segmentation Results
+
+
+
+## Reproducing results on ViT-Base & ViT-Small - Segmentation Results
+
 ---
 ### Download ImagenetDataset for segmentaion:
 - Download imagenet_dataset [Link to download dataset](http://calvin-vision.net/bigstuff/proj-imagenet/data/gtsegs_ijcv.mat)
@@ -35,8 +41,9 @@ CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./:$PYTHONPATH python3 ./main/seg_classificati
 - Move all datasets to ./data/
 
 ### pLTE:
+
 Example:
-```
+```python
 CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./:$PYTHONPATH python3 ./main/segmentation_eval/seg_stage_a.py
 
 ```
@@ -44,7 +51,7 @@ CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./:$PYTHONPATH python3 ./main/segmentation_eva
 ### LTE:
 
 Example:
-```
+```python
 CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./:$PYTHONPATH python3 ./main/segmentation_eval/seg_stage_b.py
 
 ```
