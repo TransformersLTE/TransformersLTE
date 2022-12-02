@@ -6,7 +6,7 @@ We present 'Learning To Explain' (LTE) - a novel method for producing explanatio
 ## Reproducing results on ViT-Base & ViT-Small - Pertubations Metrics
 ---
 ### Loading Checkpoints:
-- Download `checkpoints.zip` from https://drive.google.com/file/d/1AUYAxBgn5hvFbfaNgg73vNjS8PwTZYxV/view?usp=sharing 
+- Download `checkpoints.zip` from https://drive.google.com/file/d/1syOvmnXFgMsIgu-10LNhm0pHDs2oo1gm/
 - unzip classifier.zip -d ./checkpoints/ (after unzipping, the checkpointes should be in the corresponding folders based on the backbone's type (`vit_base` / `vit_small`))
 
 These checkpoints are important for reproducing the results, also, the paths and the ViT `model_name` in the config file should be edited based on the running environment.
